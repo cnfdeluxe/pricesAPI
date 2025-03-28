@@ -15,6 +15,13 @@ Esta API proporciona información sobre los precios de los productos de Inditex 
 - **Swagger** (Documentación de la API)
 - **JUnit & Mockito** (Pruebas unitarias y de integración)
 - - **Postman** (Pruebas sobre el endpoint)
+ 
+## Dependencias Spring Boot
+- **Spring Web**
+- **Spring Data JPA** (Framework principal)
+- **Lombok**
+- **H2 Database**
+- **Spring Boot Dev Tools**
 
 ## Instalación y Configuración
 
