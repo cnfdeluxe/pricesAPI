@@ -14,7 +14,7 @@ Esta API proporciona información sobre los precios de los productos de Inditex 
 - **Maven** (Gestor de dependencias)
 - **Swagger** (Documentación de la API)
 - **JUnit & Mockito** (Pruebas unitarias y de integración)
-- - **Postman** (Pruebas sobre el endpoint)
+- **Postman** (Pruebas sobre el endpoint)
  
 ## Dependencias Spring Boot
 - **Spring Web**
