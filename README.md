@@ -75,6 +75,13 @@ GET /api/prices?date=2024-03-28T14:00:00&productId=35455&brandId=1
 
 La API sigue una **arquitectura hexagonal** basada en **Domain-Driven Design (DDD)**. La estructura del proyecto se organiza en capas bien definidas para garantizar una separación clara entre el dominio, la aplicación y la infraestructura.
 
+### Implementación de ResponseBuilder
+Se ha implementado una clase personalizada ResponseBuilder para que devuelva respuestas estructuradas y asi lograr que las respuestas sean mas robustas, mantenibles y amigables para los consumidores. 
+Se han creado dos clases en Infrastructure -> utils
+- **ApiResponse.java**: DTO genérico para todas las respuestas.
+- **ResponseBuilder.java**: Clase helper para construir respuestas consistentes.
+
+
 ```
 prices-api/
 ├── src/main/java/com/inditex/prices/
