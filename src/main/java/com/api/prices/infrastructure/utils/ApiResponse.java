@@ -1,5 +1,8 @@
 package com.api.prices.infrastructure.utils;
 
+import lombok.Data;
+
+@Data
 public class ApiResponse<T> {
 
     private int status;

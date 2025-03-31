@@ -28,7 +28,7 @@ public class ControllerAdviceHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<?> handleGenericException(Exception ex) {
-        return ResponseBuilder.with(HttpStatus.INTERNAL_SERVER_ERROR, false, null, "Error interno del servidor");
+        return ResponseBuilder.with(HttpStatus.INTERNAL_SERVER_ERROR, false, null, "Server error internal");
     }
 
 

@@ -28,16 +28,18 @@ public class PriceController {
             summary = "Get product price.",
             description = "Returns the applicable price for a product of a brand on a specific date."
     )
-    @GetMapping("/{product_id}/{brand_id}/{date_application}")
-    public ResponseEntity<?> getPrice(@PathVariable("product_id") Long productID,
-                                      @PathVariable("brand_id") Long brandID,
-                                      @PathVariable("date_application") LocalDateTime dateApplication){
+    @GetMapping
+    public ResponseEntity<?> getPrice(@RequestParam("product_id") Long productID,
+                                      @RequestParam("brand_id") Long brandID,
+                                      @RequestParam("date_application") String dateApplication){
+
+        LocalDateTime dateApplicationFormat = LocalDateTime.parse(dateApplication);
 
         //Se setea el inputDTO con los parámetros de entrada
-        PriceInputDTO inputDTO = new PriceInputDTO(productID, brandID, dateApplication);
+        PriceInputDTO inputDTO = new PriceInputDTO(productID, brandID, dateApplicationFormat);
         PriceOutputDTO priceOutputDTO = priceService.getPrice(inputDTO);
 
-        return ResponseBuilder.with(HttpStatus.OK, true, priceOutputDTO, "It has been done correctly");
+        return ResponseBuilder.with(HttpStatus.OK, true, priceOutputDTO, null);
     }
 
 
