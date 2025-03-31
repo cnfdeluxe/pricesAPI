@@ -15,6 +15,7 @@ Esta API proporciona información sobre los precios de los productos de Inditex 
 - **Swagger** (Documentación de la API)
 - **JUnit & Mockito** (Pruebas unitarias y de integración)
 - **Postman** (Pruebas sobre el endpoint)
+- **Jacoco** (Test de cobertura de código)
  
 ## Dependencias Spring Boot
 - **Spring Web**
@@ -50,7 +51,7 @@ Esta API proporciona información sobre los precios de los productos de Inditex 
 ### Obtener precio de un producto en una fecha y franja horaria
 
 ```http
-GET /api/prices?date=2024-03-28T14:00:00&productId=35455&brandId=1
+GET /api/prices?product_id=35455&brand_id=1&date_application=2020-06-14T15:00:00
 ```
 
 **Parámetros:**
@@ -61,13 +62,18 @@ GET /api/prices?date=2024-03-28T14:00:00&productId=35455&brandId=1
 **Ejemplo de respuesta:**
 ```json
 {
-  "productId": 35455,
-  "brandId": 1,
-  "price": 35.50,
-  "currency": "EUR",
-  "startDate": "2024-03-28T00:00:00",
-  "endDate": "2024-03-28T23:59:59",
-  "priceList": 2
+    "status": 200,
+    "success": true,
+    "data": {
+        "product_id": 35455,
+        "brand_id": 1,
+        "price": 25.45,
+        "currency": "EUR",
+        "start_date": "2020-06-14T15:00:00",
+        "end_date": "2020-06-14T18:30:00",
+        "price_list": 2
+    },
+    "message": null
 }
 ```
 
