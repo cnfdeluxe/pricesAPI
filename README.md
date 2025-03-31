@@ -43,7 +43,7 @@ La principal función de esta API REST es proporcionar información sobre los pr
 
 4. **Acceder a la documentación Swagger**
    ```
-   http://localhost:8080/swagger-ui.html
+   http://localhost:8080/swagger-ui/index.html
    ```
 
 ## Endpoints principales
