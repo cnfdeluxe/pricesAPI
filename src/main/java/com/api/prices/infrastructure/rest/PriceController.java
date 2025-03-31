@@ -5,6 +5,7 @@ import com.api.prices.application.dto.PriceOutputDTO;
 import com.api.prices.application.service.PriceService;
 import com.api.prices.infrastructure.utils.ResponseBuilder;
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,6 +32,9 @@ public class PriceController {
     @GetMapping
     public ResponseEntity<?> getPrice(@RequestParam("product_id") Long productID,
                                       @RequestParam("brand_id") Long brandID,
+                                      @Parameter(
+                                              description = "Date of application in format yyyy-MM-dd'T'HH:mm:ss",
+                                              example = "2020-06-14T10:00:00")
                                       @RequestParam("date_application") String dateApplication){
 
         LocalDateTime dateApplicationFormat = LocalDateTime.parse(dateApplication);
